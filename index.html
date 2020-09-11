@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegas HN</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>new WOW().init();</script>
+    <script>(function () {
+  document.documentElement.setAttribute('data-scroll', '0');
+})();
+
+document.addEventListener('scroll', function (e) {
+  var html = document.documentElement.setAttribute('data-scroll', document.documentElement.scrollTop);
+});</script>
+<link rel="stylesheet" href="/src.e31bb0bc.css"></head>
+
+<body>
+    <div id="root"></div>
+
+
+</body>
+<script>jQuery(function ($) {
+  $("#seccion1").attr("data-color", "#dd3a4e");
+  $("#seccion2").attr("data-color", "#dd3a4e").attr('trasn-X', 'translateX(0px)');
+  $("#seccion3").attr("data-color", "#4b22f4").attr('trasn-X', 'translateX(-5px)');
+  $("#seccion4").attr("data-color", "#dd3a4e").attr('trasn-X', 'translateX(0px)');
+  $("#seccion5").attr("data-color", "#EA2027"); // 4b22f4
+});
+
+(function ($) {
+  $(window).on("scroll touchmove", function () {
+    if ($(document).scrollTop() >= $("#seccion1").position().top) {
+      $('body').css('background', $("#seccion1").attr("data-color"));
+      $('#arriba').css('transform', $("#seccion1").attr("trasn-X"));
+    }
+
+    ;
+
+    if ($(document).scrollTop() > $("#seccion2").position().top) {
+      console.log('entro');
+      $('body').css('background', $("#seccion2").attr("data-color"));
+      $('#arriba').css('transform', $("#seccion2").attr("trasn-X")); // document.getElementById('arriba').style.transform = 'trasnlate(10px)';
+    }
+
+    ;
+
+    if ($(document).scrollTop() > $("#seccion3").position().top) {
+      $('body').css('background', $("#seccion3").attr("data-color"));
+      setTimeout(function () {
+        $('#arriba').css('transform', $("#seccion3").attr("trasn-X"));
+      }, 3000);
+    }
+
+    ;
+
+    if ($(document).scrollTop() > $("#seccion4").position().top) {
+      $('body').css('background', $("#seccion4").attr("data-color"));
+      $('#arriba').css('transform', $("#seccion4").attr("trasn-X"));
+    }
+
+    ; // if ($(document).scrollTop() >= $("#seccion5").position().top) {
+    //     $('body').css('background', $("#seccion5").attr("data-color"))
+    // };
+  });
+})(jQuery);</script>
+<script src="/src.e31bb0bc.js"></script>
+<script>// gsap.registerPlugin(scrollTrigger);
+// gsap.to(".container-sercs", {
+//     scrollTrigger: {
+//         trigger: ".container-serc",
+//         start: "top center",
+//         markers: true,
+//         toggleActions: "restart"
+//     },
+//     x: 400,
+//     rotation: 360,
+//     duration: 3
+// });</script>
+
+</html>
